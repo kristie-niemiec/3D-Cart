@@ -8,11 +8,12 @@ using UnityEngine.UI;
 public class gaze : MonoBehaviour
 {
     public GameObject overlayMenu;
+    public GameObject Panel;
     public Camera camera;
     private bool isShowing = false;
-    RaycastHit hitInfo;
+    public RaycastHit hitInfo;
     private string assetName;
-    Sprite MenuImg;
+    public Sprite MenuImg;
     public void Start()
     {
         overlayMenu.SetActive(isShowing);
@@ -45,7 +46,8 @@ public class gaze : MonoBehaviour
         //Debug.Log(MenuImg);
         isShowing = !isShowing;
         overlayMenu.SetActive(isShowing);
-        overlayMenu.GetComponent<Image>().sprite = MenuImg;
+        //overlayMenu.GetComponent<Image>().sprite = MenuImg;
+        Panel.GetComponent<Image>().sprite = MenuImg;
     }
 
     public void OnGazeLeave()
