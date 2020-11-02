@@ -2310,20 +2310,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overlayMenu: {fileID: 1069210237}
+  Panel: {fileID: 0}
   camera: {fileID: 963194227}
---- !u!114 &377230107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377230105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e25d0a4ae7b1ea43961c0fe3a9c3d7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDragged: 0
+  MenuImg: {fileID: 0}
 --- !u!114 &377230108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2341,7 +2330,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 377230107}
+        - m_Target: {fileID: 0}
           m_MethodName: StartPickup
           m_Mode: 1
           m_Arguments:
@@ -2356,7 +2345,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 377230107}
+        - m_Target: {fileID: 0}
           m_MethodName: EndPickup
           m_Mode: 1
           m_Arguments:
@@ -2499,20 +2488,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overlayMenu: {fileID: 1069210237}
+  Panel: {fileID: 0}
   camera: {fileID: 963194227}
---- !u!114 &393473346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 393473344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e25d0a4ae7b1ea43961c0fe3a9c3d7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDragged: 0
+  MenuImg: {fileID: 0}
 --- !u!114 &393473347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2530,7 +2508,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 393473346}
+        - m_Target: {fileID: 0}
           m_MethodName: StartPickup
           m_Mode: 1
           m_Arguments:
@@ -2545,7 +2523,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 393473346}
+        - m_Target: {fileID: 0}
           m_MethodName: EndPickup
           m_Mode: 1
           m_Arguments:
@@ -5910,20 +5888,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overlayMenu: {fileID: 1069210237}
+  Panel: {fileID: 0}
   camera: {fileID: 963194227}
---- !u!114 &953356798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 953356796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e25d0a4ae7b1ea43961c0fe3a9c3d7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDragged: 0
+  MenuImg: {fileID: 0}
 --- !u!114 &953356799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5941,7 +5908,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 953356798}
+        - m_Target: {fileID: 0}
           m_MethodName: StartPickup
           m_Mode: 1
           m_Arguments:
@@ -5956,7 +5923,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 953356798}
+        - m_Target: {fileID: 0}
           m_MethodName: EndPickup
           m_Mode: 1
           m_Arguments:
@@ -6093,6 +6060,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 681417793}
+  - {fileID: 1423070477}
   m_Father: {fileID: 1182118251}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7274,6 +7242,7 @@ GameObject:
   - component: {fileID: 1182118251}
   - component: {fileID: 1182118250}
   - component: {fileID: 1182118252}
+  - component: {fileID: 1182118253}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -7332,6 +7301,20 @@ MonoBehaviour:
   sprintSpeed: 10
   gravity: 15
   cameraDirection: {fileID: 963194228}
+--- !u!114 &1182118253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182118249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c442043cc7d168a4f957cef67b2ae75f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterCamera: {fileID: 963194227}
+  slot: {fileID: 1423070477}
 --- !u!1001 &1200335325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8096,6 +8079,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70e1fcdcfea29ed48bc3e9dc739bb684, type: 3}
+--- !u!1 &1393559783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1393559786}
+  - component: {fileID: 1393559785}
+  - component: {fileID: 1393559784}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1393559784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393559783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3fe1a6e07d113a43a2ddca30c4bbf7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &1393559785
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393559783}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!4 &1393559786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393559783}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.4, y: 2.31, z: -10.791617}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1888049405}
+  m_Father: {fileID: 0}
+  m_RootOrder: 141
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1394452794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8173,6 +8217,85 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 31f59507c2dca6645a15d3e64f5ea98d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cff4d1e8f953dfd45a56800a42d5b0c8, type: 3}
+--- !u!1 &1423070476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1423070477}
+  - component: {fileID: 1423070479}
+  - component: {fileID: 1423070478}
+  m_Layer: 0
+  m_Name: Grab Slot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1423070477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423070476}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.35, y: -1.445, z: 0.545}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 963194228}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1423070478
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423070476}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1423070479
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423070476}
+  m_Mesh: {fileID: 0}
 --- !u!1 &1434024114
 GameObject:
   m_ObjectHideFlags: 0
@@ -9305,20 +9428,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overlayMenu: {fileID: 1069210237}
+  Panel: {fileID: 0}
   camera: {fileID: 963194227}
---- !u!114 &1660558695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660558693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e25d0a4ae7b1ea43961c0fe3a9c3d7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDragged: 0
+  MenuImg: {fileID: 0}
 --- !u!114 &1660558696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9336,7 +9448,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1660558695}
+        - m_Target: {fileID: 0}
           m_MethodName: StartPickup
           m_Mode: 1
           m_Arguments:
@@ -9351,7 +9463,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1660558695}
+        - m_Target: {fileID: 0}
           m_MethodName: EndPickup
           m_Mode: 1
           m_Arguments:
@@ -10128,20 +10240,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overlayMenu: {fileID: 1069210237}
+  Panel: {fileID: 0}
   camera: {fileID: 963194227}
---- !u!114 &1784857245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1784857243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e25d0a4ae7b1ea43961c0fe3a9c3d7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDragged: 0
+  MenuImg: {fileID: 0}
 --- !u!114 &1784857246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10159,7 +10260,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1784857245}
+        - m_Target: {fileID: 0}
           m_MethodName: StartPickup
           m_Mode: 1
           m_Arguments:
@@ -10174,7 +10275,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1784857245}
+        - m_Target: {fileID: 0}
           m_MethodName: EndPickup
           m_Mode: 1
           m_Arguments:
@@ -10790,6 +10891,100 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30bb67eec4a39a8469953d5fa442a542, type: 3}
+--- !u!1 &1888049404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1888049405}
+  - component: {fileID: 1888049408}
+  - component: {fileID: 1888049407}
+  - component: {fileID: 1888049406}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1888049405
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888049404}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.21, y: 3.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393559786}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1888049406
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888049404}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1888049407
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888049404}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1888049408
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888049404}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1900942855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11567,7 +11762,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2029194594}
+        - m_Target: {fileID: 0}
           m_MethodName: StartPickup
           m_Mode: 1
           m_Arguments:
@@ -11582,7 +11777,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2029194594}
+        - m_Target: {fileID: 0}
           m_MethodName: EndPickup
           m_Mode: 1
           m_Arguments:
@@ -11623,19 +11818,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &2029194594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029194592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e25d0a4ae7b1ea43961c0fe3a9c3d7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDragged: 0
 --- !u!64 &2029194595
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11663,7 +11845,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overlayMenu: {fileID: 1069210237}
+  Panel: {fileID: 0}
   camera: {fileID: 963194227}
+  MenuImg: {fileID: 0}
 --- !u!1001 &2045601833
 PrefabInstance:
   m_ObjectHideFlags: 0
