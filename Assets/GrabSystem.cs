@@ -20,6 +20,7 @@ public class GrabSystem : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        //If pickup button pushed
         if(Input.GetButtonDown("Fire1"))
         {
             //Check if any item held, drop if so
@@ -37,7 +38,6 @@ public class GrabSystem : MonoBehaviour
                 //Check if the item is pickable and then pick up it so
                 if(Physics.Raycast(ray, out hit, 10))
                 {
-                    print("Ray hit");
                     var pickable = hit.transform.GetComponent<PickableItem>();
 
                     if (pickable)
@@ -45,6 +45,20 @@ public class GrabSystem : MonoBehaviour
                         PickItem(pickable);
                     }
                 }
+            }
+        }
+
+        //If rotate button pushed
+        if (Input.GetButton("Fire2"))
+        {
+            print("Rotate pressed");
+            //Check if any item held, if not do nothing
+            if(pickedItem)
+            {
+                var mx = Input.GetAxisRaw("Mouse X");
+                var my = Input.GetAxisRaw("Mouse Y");
+
+                pickedItem.transform.Rotate(my, 0, -mx, Space.Self);
             }
         }
     }
@@ -66,6 +80,7 @@ public class GrabSystem : MonoBehaviour
         //Reset position and rotation
         item.transform.localPosition = Vector3.zero;
         item.transform.localEulerAngles = Vector3.zero;
+
     }
 
     //Method to drop item
