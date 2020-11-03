@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Image))]
+//[RequireComponent(typeof(Image))]
 
 public class gaze : MonoBehaviour
 {
@@ -38,8 +38,29 @@ public class gaze : MonoBehaviour
         }
        switch (assetName)
         {
-            case "Chips32":
+            case "Chips":
                 MenuImg = Resources.Load<Sprite>("Chips_Menu"); 
+                break;
+            case "Apple":
+                MenuImg = Resources.Load<Sprite>("Apple_Menu");
+                break;
+            case "banana":
+                MenuImg = Resources.Load<Sprite>("Banana_Menu");
+                break;
+            case "Carrot":
+                MenuImg = Resources.Load<Sprite>("Carrot_Menu");
+                break;
+            case "BeerBox":
+                MenuImg = Resources.Load<Sprite>("Box_Menu");
+                break;
+            case "Bottle":
+                MenuImg = Resources.Load<Sprite>("Bottle_Menu");
+                break;
+            case "SoapBottle":
+                MenuImg = Resources.Load<Sprite>("Soap_Menu");
+                break;
+            case "SprayBottle":
+                MenuImg = Resources.Load<Sprite>("Spray_Menu");
                 break;
         }
         //overlayMenu.GetComponent<Image>().sprite = MenuImg;
