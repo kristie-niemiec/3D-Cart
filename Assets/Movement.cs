@@ -28,50 +28,56 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Prevents character from flying if camera is pointed upwards
-        if (controller.isGrounded)
+        //Prevent movement if rotating object
+        if(!Input.GetButton("Fire2"))  
         {
-            move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-
-            move = cameraDirection.TransformDirection(move);
-        }
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            speed = sprintSpeed;
-        }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            speed = walkSpeed;
-        }
-
-        move.y -= gravity * Time.deltaTime;
-        controller.Move(move * Time.deltaTime * speed);
-
-
-
-
-            // if player is not moving - spawn cart
-            /*if(!transform.hasChanged)
+            // Prevents character from flying if camera is pointed upwards
+            if (controller.isGrounded)
             {
-                // create cart
-                GameObject cart = Instantiate(myCart) as GameObject;
-                //GameObject item = GameObject.Find(cart);
-                // add collider
+                move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
-                // move to position
-                myCart.transform.position = camera.transform.position;
-                myCart.transform.rotation = camera.transform.rotation;
+                move = cameraDirection.TransformDirection(move);
             }
-            else
+
+            if (Input.GetKey(KeyCode.LeftShift))
             {
-                //transform.hasChanged = false;
-                // destroy when player moves
-                //if (item)
-                //{
-                //    Destroy(GameObject.Find(cart));
-                //}
-            }*/
+                speed = sprintSpeed;
+            }
+            if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                speed = walkSpeed;
+            }
+
+            move.y -= gravity * Time.deltaTime;
+            controller.Move(move * Time.deltaTime * speed);
 
         }
+
+
+
+
+
+        // if player is not moving - spawn cart
+        /*if(!transform.hasChanged)
+        {
+            // create cart
+            GameObject cart = Instantiate(myCart) as GameObject;
+            //GameObject item = GameObject.Find(cart);
+            // add collider
+
+            // move to position
+            myCart.transform.position = camera.transform.position;
+            myCart.transform.rotation = camera.transform.rotation;
+        }
+        else
+        {
+            //transform.hasChanged = false;
+            // destroy when player moves
+            //if (item)
+            //{
+            //    Destroy(GameObject.Find(cart));
+            //}
+        }*/
+
+    }
 }

@@ -30,6 +30,7 @@ public class GrabSystem : MonoBehaviour
         //If pickup button pushed
         if(Input.GetButtonDown("Fire1"))
         {
+            print("Fire1 Pressed");
             //Check if any item held, drop if so
             if(pickedItem)
             {
@@ -63,8 +64,8 @@ public class GrabSystem : MonoBehaviour
             //Check if any item held, if not do nothing
             if(pickedItem)
             {
-                var mx = Input.GetAxisRaw("Mouse X");
-                var my = Input.GetAxisRaw("Mouse Y");
+                var mx = Input.GetAxis("Horizontal");
+                var my = Input.GetAxis("Vertical");
 
                 pickedItem.transform.Rotate(my, 0, -mx, Space.Self);
             }
@@ -73,6 +74,7 @@ public class GrabSystem : MonoBehaviour
         //Add item to inventory
         if (Input.GetButtonDown("Fire3"))
         {
+            print("Add to cart pressed");
             if (pickedItem)
             {
                 print("add");
