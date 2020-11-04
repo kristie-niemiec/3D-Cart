@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+//using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,9 @@ public class gaze : MonoBehaviour
     public RaycastHit hitInfo;
     private string assetName;
     public Sprite MenuImg;
+    public GameObject inv;
+
+
     public void Start()
     {
         overlayMenu.SetActive(isShowing);
@@ -22,6 +26,9 @@ public class gaze : MonoBehaviour
 
     public void OnGazeEnter()
     {
+        // Clear menu items
+        inv.GetComponent<Text>().text = "";
+
         // display menu
         Debug.Log("Gaze entered");
 
@@ -63,18 +70,21 @@ public class gaze : MonoBehaviour
                 MenuImg = Resources.Load<Sprite>("Spray_Menu");
                 break;
         }
+
         //overlayMenu.GetComponent<Image>().sprite = MenuImg;
         //Debug.Log(MenuImg);
         isShowing = !isShowing;
         overlayMenu.SetActive(isShowing);
         //overlayMenu.GetComponent<Image>().sprite = MenuImg;
         Panel.GetComponent<Image>().sprite = MenuImg;
+
     }
 
     public void OnGazeLeave()
     {
         // hide menu
         Debug.Log("Gaze left");
+        Panel.GetComponent<Image>().sprite = null;
         isShowing = !isShowing;
         overlayMenu.SetActive(isShowing);
     }

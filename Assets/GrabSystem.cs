@@ -2,10 +2,17 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class GrabSystem : MonoBehaviour
 {
+    public GameObject currObj;
+
+    //Inventory List
+    public List<string> inventory = new List<string>();
+
+
     //Character camera
     [SerializeField]
     private Camera characterCamera;
@@ -39,6 +46,7 @@ public class GrabSystem : MonoBehaviour
                 if(Physics.Raycast(ray, out hit, 10))
                 {
                     var pickable = hit.transform.GetComponent<PickableItem>();
+                    currObj = hit.collider.gameObject;
 
                     if (pickable)
                     {
@@ -61,6 +69,22 @@ public class GrabSystem : MonoBehaviour
                 pickedItem.transform.Rotate(my, 0, -mx, Space.Self);
             }
         }
+
+        //Add item to inventory
+        if (Input.GetButtonDown("Fire3"))
+        {
+            if (pickedItem)
+            {
+                print("add");
+
+                inventory.Add(currObj.name);
+
+                currObj.SetActive(false);
+
+                pickedItem = null;
+            }
+
+        }
     }
 
     //Method to pick-up item 
@@ -80,7 +104,6 @@ public class GrabSystem : MonoBehaviour
         //Reset position and rotation
         item.transform.localPosition = Vector3.zero;
         item.transform.localEulerAngles = Vector3.zero;
-
     }
 
     //Method to drop item

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 
@@ -13,10 +14,15 @@ public class Movement : MonoBehaviour
     public float gravity = 15.0f;
     public Transform cameraDirection;
 
+    public GameObject myCart;
+    public Camera camera;
+
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        myCart.SetActive(true);
     }
 
     // Update is called once per frame
@@ -44,5 +50,28 @@ public class Movement : MonoBehaviour
 
 
 
-    }
+
+            // if player is not moving - spawn cart
+            /*if(!transform.hasChanged)
+            {
+                // create cart
+                GameObject cart = Instantiate(myCart) as GameObject;
+                //GameObject item = GameObject.Find(cart);
+                // add collider
+
+                // move to position
+                myCart.transform.position = camera.transform.position;
+                myCart.transform.rotation = camera.transform.rotation;
+            }
+            else
+            {
+                //transform.hasChanged = false;
+                // destroy when player moves
+                //if (item)
+                //{
+                //    Destroy(GameObject.Find(cart));
+                //}
+            }*/
+
+        }
 }
