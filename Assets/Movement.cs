@@ -39,14 +39,14 @@ public class Movement : MonoBehaviour
                 move = cameraDirection.TransformDirection(move);
             }
 
-            if (Input.GetKey(KeyCode.LeftShift))
+            /*if (Input.GetKey(KeyCode.LeftShift))
             {
                 speed = sprintSpeed;
             }
             if (Input.GetKeyUp(KeyCode.LeftShift))
             {
                 speed = walkSpeed;
-            }
+            }*/
 
             move.y -= gravity * Time.deltaTime;
             controller.Move(move * Time.deltaTime * speed);
