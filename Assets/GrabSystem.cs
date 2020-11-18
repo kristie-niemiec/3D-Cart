@@ -12,6 +12,7 @@ public class GrabSystem : MonoBehaviour
     //Inventory List
     public List<string> inventory = new List<string>();
 
+    public GameObject text;
 
     //Character camera
     [SerializeField]
@@ -27,8 +28,12 @@ public class GrabSystem : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        text.transform.position = characterCamera.transform.position + characterCamera.transform.forward * 1.5f;
+        text.transform.rotation = characterCamera.transform.rotation;
+        text.SetActive(false);
+
         //If pickup button pushed
-        if(Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             print("Fire1 Pressed");
             //Check if any item held, drop if so
@@ -61,15 +66,22 @@ public class GrabSystem : MonoBehaviour
         if (Input.GetButton("Fire2"))
         {
             print("Rotate pressed");
+
             //Check if any item held, if not do nothing
-            if(pickedItem)
+            if (pickedItem)
             {
+                // Show "Rotate Mode" text
+                text.SetActive(true);
+
                 var mx = Input.GetAxis("Horizontal");
                 var my = Input.GetAxis("Vertical");
 
                 pickedItem.transform.Rotate(my, 0, -mx, Space.Self);
             }
         }
+
+        //Hide rotate text here?
+        //text.SetActive(false);
 
         //Add item to inventory
         if (Input.GetButtonDown("Fire3"))

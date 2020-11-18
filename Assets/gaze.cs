@@ -17,6 +17,7 @@ public class gaze : MonoBehaviour
     public Sprite MenuImg;
     public GameObject inv;
 
+    Vector3 temp = new Vector3(0, 0, 0.3f);
 
     public void Start()
     {
@@ -32,8 +33,9 @@ public class gaze : MonoBehaviour
         // display menu
         Debug.Log("Gaze entered");
 
-        overlayMenu.transform.position = camera.transform.position + camera.transform.forward * 3;
+        overlayMenu.transform.position = /*camera.transform.position + */temp;
         overlayMenu.transform.rotation = camera.transform.rotation;
+
         if (Physics.Raycast(
               Camera.main.transform.position,
               Camera.main.transform.forward,

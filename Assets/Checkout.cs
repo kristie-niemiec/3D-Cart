@@ -26,8 +26,7 @@ public class Checkout : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        overlayMenu.transform.position = camera.transform.position + camera.transform.forward * 3;
+        overlayMenu.transform.position = camera.transform.position + camera.transform.forward * 2.5f + (camera.transform.right * -2.2f) + (camera.transform.up * 0.5f);
         overlayMenu.transform.rotation = camera.transform.rotation;
 
         // User selects checkout counter
