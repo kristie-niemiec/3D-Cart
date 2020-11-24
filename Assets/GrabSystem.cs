@@ -89,14 +89,7 @@ public class GrabSystem : MonoBehaviour
             print("Add to cart pressed");
             if (pickedItem)
             {
-                /*print("add");
-
-                inventory.Add(currObj.name);
-
-                currObj.SetActive(false);
-
-                pickedItem = null;*/
-                AddToCart();
+                AddToCart(currObj);
             }
 
         }
@@ -138,13 +131,13 @@ public class GrabSystem : MonoBehaviour
     }
 
     //Method to add to inventory
-    public void AddToCart()
+    public void AddToCart(GameObject item)
     {
         print("add");
 
-        inventory.Add(currObj.name);
+        inventory.Add(item.name);
 
-        currObj.SetActive(false);
+        //currObj.SetActive(false);
 
         pickedItem = null;
     }

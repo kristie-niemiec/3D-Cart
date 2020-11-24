@@ -15,4 +15,9 @@ public class Cart : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        GameObject.Find("Character").GetComponent<GrabSystem>().AddToCart(other.gameObject);
+    }
 }
