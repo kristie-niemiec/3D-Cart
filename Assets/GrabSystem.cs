@@ -89,13 +89,14 @@ public class GrabSystem : MonoBehaviour
             print("Add to cart pressed");
             if (pickedItem)
             {
-                print("add");
+                /*print("add");
 
                 inventory.Add(currObj.name);
 
                 currObj.SetActive(false);
 
-                pickedItem = null;
+                pickedItem = null;*/
+                AddToCart();
             }
 
         }
@@ -134,5 +135,17 @@ public class GrabSystem : MonoBehaviour
 
         //Throw item forward slightly
         item.Rb.AddForce(item.transform.forward * 2, ForceMode.VelocityChange);
+    }
+
+    //Method to add to inventory
+    public void AddToCart()
+    {
+        print("add");
+
+        inventory.Add(currObj.name);
+
+        currObj.SetActive(false);
+
+        pickedItem = null;
     }
 }

@@ -8482,7 +8482,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 687645092}
-  - component: {fileID: 687645095}
+  - component: {fileID: 687645093}
+  - component: {fileID: 687645094}
   m_Layer: 0
   m_Name: myCart
   m_TagString: Untagged
@@ -8498,14 +8499,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687645091}
   m_LocalRotation: {x: -0, y: 0.68981075, z: -0, w: 0.72398984}
-  m_LocalPosition: {x: -3.8, y: -0.21000004, z: -6.3745627}
+  m_LocalPosition: {x: -3.8, y: -1.27, z: -6.3745627}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1738215397}
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 87.23, z: 0}
---- !u!65 &687645095
+--- !u!114 &687645093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687645091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b72dcde36f10641bb3cc303c4d55c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &687645094
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8513,11 +8526,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687645091}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.91, y: 0.46, z: 0.56}
-  m_Center: {x: 0, y: 0.72, z: 0}
+  m_Size: {x: 5.6516395, y: 2.5165846, z: 3.2091591}
+  m_Center: {x: -0.40271878, y: 4.029184, z: 0.049340606}
 --- !u!1 &694599502 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: cff4d1e8f953dfd45a56800a42d5b0c8,
@@ -12302,6 +12315,7 @@ GameObject:
   - component: {fileID: 1009443277}
   - component: {fileID: 1009443279}
   - component: {fileID: 1009443278}
+  - component: {fileID: 1009443280}
   m_Layer: 0
   m_Name: cart_base
   m_TagString: Untagged
@@ -12369,6 +12383,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009443276}
+  m_Mesh: {fileID: -4772526924180956277, guid: 40be3144dba831c46a21cfeb35c68baa, type: 3}
+--- !u!64 &1009443280
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009443276}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -4772526924180956277, guid: 40be3144dba831c46a21cfeb35c68baa, type: 3}
 --- !u!1 &1020369144 stripped
 GameObject:
@@ -19666,7 +19694,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1738215397}
-  - component: {fileID: 1738215398}
   m_Layer: 0
   m_Name: shopping_cart
   m_TagString: Untagged
@@ -19682,7 +19709,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738215396}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.93, y: -1.17, z: -10.78}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5.5323, y: 5.5323, z: 5.5323}
   m_Children:
   - {fileID: 1009443277}
@@ -19692,19 +19719,6 @@ Transform:
   m_Father: {fileID: 687645092}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1738215398
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1738215396}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.91, y: 0.46, z: 0.56}
-  m_Center: {x: 0, y: 0.72, z: 0}
 --- !u!1 &1738223382
 GameObject:
   m_ObjectHideFlags: 0
