@@ -22,8 +22,13 @@ public class GrabSystem : MonoBehaviour
     [SerializeField]
     private Transform slot;
 
+    //Slot for holding cart
+    [SerializeField]
+    private Transform cartSlot;
+
     //Currently held item
     private PickableItem pickedItem;
+    private PickableCart pickedCart;
 
     // Update is called once per frame
     private void Update()
@@ -41,6 +46,10 @@ public class GrabSystem : MonoBehaviour
             {
                 DropItem(pickedItem);
             }
+            else if(pickedCart)
+            {
+                DropCart(pickedCart);
+            }
             //Otherwise, try to pick up item in cursor
             else
             {  
@@ -52,11 +61,16 @@ public class GrabSystem : MonoBehaviour
                 if(Physics.Raycast(ray, out hit, 10))
                 {
                     var pickable = hit.transform.GetComponent<PickableItem>();
+                    var cartable = hit.transform.GetComponent<PickableCart>();
                     currObj = hit.collider.gameObject;
 
                     if (pickable)
                     {
                         PickItem(pickable);
+                    }
+                    else if (cartable)
+                    {
+                        PickCart(cartable);
                     }
                 }
             }
@@ -114,6 +128,23 @@ public class GrabSystem : MonoBehaviour
         item.transform.localEulerAngles = Vector3.zero;
     }
 
+    //Method to pick-up cart
+    private void PickCart(PickableCart cart)
+    {
+        //Assign reference to new item
+        pickedCart = cart;
+
+        //move item to character's slot
+        cart.transform.SetParent(cartSlot);
+
+        //Reset position and rotation
+        cart.transform.localPosition = Vector3.zero;
+        cart.transform.localEulerAngles = Vector3.zero;
+
+        //Rotate cart to face the right way
+        cart.transform.Rotate(0, 90, 0);
+    }
+
     //Method to drop item
     private void DropItem(PickableItem item)
     {
@@ -130,12 +161,23 @@ public class GrabSystem : MonoBehaviour
         item.Rb.AddForce(item.transform.forward * 2, ForceMode.VelocityChange);
     }
 
+    //Method to drop cart
+    private void DropCart(PickableCart cart)
+    {
+        //Remove reference
+        pickedCart = null;
+
+        //Remove Parent
+        cart.transform.SetParent(null);
+    }
+
     //Method to add to inventory
     public void AddToCart(GameObject item)
     {
         print("add");
 
-        inventory.Add(item.name);
+        if(item.name != "Character")
+            inventory.Add(item.name);
 
         //currObj.SetActive(false);
 

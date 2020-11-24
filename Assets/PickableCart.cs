@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cart : MonoBehaviour
+public class PickableCart : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,10 +14,5 @@ public class Cart : MonoBehaviour
     void Update()
     {
         
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        GameObject.Find("Character").GetComponent<GrabSystem>().AddToCart(other.gameObject);
     }
 }
