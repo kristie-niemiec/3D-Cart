@@ -134,6 +134,11 @@ public class GrabSystem : MonoBehaviour
         //Assign reference to new item
         pickedCart = cart;
 
+        //Disable rigidbody & reset velocities
+        cart.Rb.isKinematic = true;
+        cart.Rb.velocity = Vector3.zero;
+        cart.Rb.angularVelocity = Vector3.zero;
+
         //move item to character's slot
         cart.transform.SetParent(cartSlot);
 
@@ -169,6 +174,12 @@ public class GrabSystem : MonoBehaviour
 
         //Remove Parent
         cart.transform.SetParent(null);
+
+        //Re-enable rigidbody
+        cart.Rb.isKinematic = false;
+
+        //Throw item forward slightly
+        cart.Rb.AddForce(cart.transform.forward * 2, ForceMode.VelocityChange);
     }
 
     //Method to add to inventory
@@ -176,7 +187,7 @@ public class GrabSystem : MonoBehaviour
     {
         print("add");
 
-        if(item.name != "Character")
+        if(item.name != "Character" && item.name != "Floor" && item.name != "Shelf")
             inventory.Add(item.name);
 
         //currObj.SetActive(false);

@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PickableCart : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Rigidbody rb;
+    public Rigidbody Rb => rb;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 }
