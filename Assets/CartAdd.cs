@@ -18,6 +18,13 @@ public class CartAdd : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Call add to cart when object enters physical cart
         GameObject.Find("Character").GetComponent<GrabSystem>().AddToCart(other.gameObject);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        //Call remove from cart when object leaves physical cart
+        GameObject.Find("Character").GetComponent<GrabSystem>().RemoveFromCart(other.gameObject);
     }
 }

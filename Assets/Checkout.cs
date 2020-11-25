@@ -38,24 +38,29 @@ public class Checkout : MonoBehaviour
             //TODO: add stuff to make sure the object hit is the checkout
             if (Physics.Raycast(ray, out hit, 50))
             {
-                // Clear menu items
-                inv.GetComponent<Text>().text = "";
+                //band-aid fix for checkout list showing up when grabbing cart
+                var cartable = hit.transform.GetComponent<PickableCart>();
 
-                // Show items on menu
-                //GameObject temp = GameObject.Find("Character");
-                //script = temp.GetComponent<GrabSystem>();
-
-                for (int i = 0; i < script.inventory.Count; i++)
+                if(!cartable)
                 {
-                    Debug.Log("item is: " + script.inventory[i].ToString());
-                    inv.GetComponent<Text>().text += script.inventory[i].ToString();
-                    inv.GetComponent<Text>().text += "\n";
+                    // Clear menu items
+                    inv.GetComponent<Text>().text = "";
+
+                    // Show items on menu
+                    //GameObject temp = GameObject.Find("Character");
+                    //script = temp.GetComponent<GrabSystem>();
+
+                    for (int i = 0; i < script.inventory.Count; i++)
+                    {
+                        Debug.Log("item is: " + script.inventory[i].ToString());
+                        inv.GetComponent<Text>().text += script.inventory[i].ToString();
+                        inv.GetComponent<Text>().text += "\n";
+                    }
+
+                    // Display inventory
+                    isShowing = !isShowing;
+                    overlayMenu.SetActive(isShowing);
                 }
-
-                // Display inventory
-                isShowing = !isShowing;
-                overlayMenu.SetActive(isShowing);
-
             }
         }
     }
