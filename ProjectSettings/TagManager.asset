@@ -8,6 +8,7 @@ TagManager:
   - Key
   - InteractiveObject
   - Door
+  - Register
   layers:
   - Default
   - TransparentFX

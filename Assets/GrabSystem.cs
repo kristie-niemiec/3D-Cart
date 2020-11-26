@@ -11,6 +11,7 @@ public class GrabSystem : MonoBehaviour
 
     //Inventory List
     public List<string> inventory = new List<string>();
+    public List<GameObject> inventory1 = new List<GameObject>();
 
     public GameObject text;
 
@@ -188,7 +189,10 @@ public class GrabSystem : MonoBehaviour
         print("add");
 
         if(item.name != "Character" && item.name != "Floor" && !item.name.Contains("Shelf"))
+        {
             inventory.Add(item.name);
+            inventory1.Add(item);
+        }
 
         //currObj.SetActive(false);
 
@@ -201,6 +205,10 @@ public class GrabSystem : MonoBehaviour
         print("remove");
 
         if (item.name != "Character" && item.name != "Floor" && !item.name.Contains("Shelf"))
+        {
             inventory.Remove(item.name);
+            inventory1.Remove(item);
+        }
+
     }
 }
