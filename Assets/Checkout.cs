@@ -37,6 +37,9 @@ public class Checkout : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ckMenu.transform.position = camera.transform.position + camera.transform.forward * 3f;
+        ckMenu.transform.rotation = camera.transform.rotation;
+
         overlayMenu.transform.position = camera.transform.position + camera.transform.forward * 2.2f + (camera.transform.right * -.8f) + (camera.transform.up * 0.5f);
         overlayMenu.transform.rotation = camera.transform.rotation;
 
