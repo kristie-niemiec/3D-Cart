@@ -83,8 +83,9 @@ public class Checkout : MonoBehaviour
                     {
                         //Debug.Log("item is: " + script.inventory[i].ToString());
                         inv.GetComponent<Text>().text += script.inventory[i].ToString();
-                        inv.GetComponent<Text>().text += "\n";
+                        inv.GetComponent<Text>().text += "\n\n";
                     }
+                    
 
                     // Display inventory
                     isShowing = !isShowing;
@@ -134,18 +135,19 @@ public class Checkout : MonoBehaviour
         inv1.GetComponent<Text>().text = "Items in Cart:";
         inv1.GetComponent<Text>().text += "\n";
 
+        float total = 0.0f;
+
         // populate with shopping list
         for (int i = 0; i < script.inventory.Count; i++)
         {
             //Debug.Log("item is: " + script.inventory[i].ToString());
-            inv1.GetComponent<Text>().text += script.inventory[i].ToString();
+            inv1.GetComponent<Text>().text += script.inventory1[i].name;
             inv1.GetComponent<Text>().text += "\n";
         }
 
-
         // add ui prompt to let user know controls
-        //inv1.GetComponent<Text>().text += "\n";
-        //inv1.GetComponent<Text>().text = "Proceed with Checkout: ";
+        inv1.GetComponent<Text>().text += "Complete Checkout: OK\n";
+        inv1.GetComponent<Text>().text += "Cancel Checkout: X\n";
 
 
         active = true;
